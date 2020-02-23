@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="262.0" style="-fx-background-color: #313444;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Interface_resseauController">
+   <children>
+      <VBox layoutX="9.0" layoutY="65.0" prefHeight="99.0" prefWidth="242.0">
+         <children>
+            <JFXTextField fx:id="tfdNomresseau" labelFloat="true" maxWidth="242.0" minWidth="242.0" prefHeight="21.0" prefWidth="242.0" promptText="Nom du reseau......................." style="-fx-background-radius: 1em;" unFocusColor="#eee9e9">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <focusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#4059a9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </focusColor>
+            </JFXTextField>
+            <JFXTextField fx:id="tfdPwd" labelFloat="true" maxWidth="242.0" minWidth="230.0" prefHeight="19.0" prefWidth="242.0" promptText="Mot de passe.........................." style="-fx-background-radius: 1em;" unFocusColor="#eee9e9">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </VBox>
+      <RadioButton fx:id="rdbCree" layoutX="9.0" layoutY="35.0" mnemonicParsing="false" onAction="#CreeAction" scaleShape="false" selected="true" stylesheets="@../CSS/Cls_css.css" text="Cree" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <toggleGroup>
+            <ToggleGroup fx:id="ResseauBtn" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbtnActive" layoutX="96.0" layoutY="35.0" mnemonicParsing="false" onAction="#ActiveAction" scaleShape="false" stylesheets="@../CSS/Cls_css.css" text="Active" textFill="WHITE" toggleGroup="$ResseauBtn">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </RadioButton>
+      <RadioButton fx:id="rbtnArret" layoutX="194.0" layoutY="35.0" mnemonicParsing="false" onAction="#ArretAction" prefHeight="17.0" prefWidth="64.0" scaleShape="false" stylesheets="@../CSS/Cls_css.css" text="Arret" textFill="WHITE" toggleGroup="$ResseauBtn">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </RadioButton>
+      <Label alignment="CENTER" layoutX="1.0" layoutY="2.0" prefHeight="17.0" prefWidth="262.0" text="RESEAU LOCAL" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <JFXButton fx:id="btnConnexion" layoutX="75.0" layoutY="164.0" onAction="#ConnectionBtn" prefHeight="16.0" prefWidth="114.0" style="-fx-background-color: #FFF; -fx-background-radius: 2em;" text="Acive">
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <Pane layoutX="89.0" layoutY="19.0" prefHeight="2.0" prefWidth="84.0" style="-fx-background-color: #FFF;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="311.0" prefWidth="401.0" style="-fx-background-color: #ffffff; -fx-background-radius: 4em; -fx-border-radius: 4em;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Interface_beneficeController">
+   <children>
+      <HBox layoutX="66.0" layoutY="166.0" prefHeight="34.0" prefWidth="256.0" style="-fx-border-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;">
+         <children>
+            <Label fx:id="beneficeV" alignment="CENTER" prefHeight="25.0" prefWidth="210.0" text="Benefice">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <JFXButton buttonType="RAISED" prefHeight="25.0" prefWidth="18.0" style="-fx-background-color: #00BCD4; -fx-background-radius: 4em; -fx-border-radius: 4em;" textFill="#fcf1f1">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="#d7d2d2" glyphName="DOLLAR" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox layoutY="69.0" style="-fx-border-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;">
+         <children>
+            <DatePicker fx:id="date1" promptText="Date Debut" style="-fx-background-color: Transparent;">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </DatePicker>
+         </children>
+      </HBox>
+      <HBox layoutX="209.0" layoutY="69.0" prefHeight="27.0" prefWidth="192.0" style="-fx-border-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;">
+         <children>
+            <DatePicker fx:id="date2" promptText="Date Fin" style="-fx-background-color: Transparent;">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </DatePicker>
+         </children>
+      </HBox>
+      <JFXButton fx:id="ActualiserBtn" buttonType="RAISED" layoutX="157.0" layoutY="122.0" onAction="#actualise_" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" text="Bénéfice">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="111.0" layoutY="30.0" prefHeight="25.0" prefWidth="199.0" style="-fx-background-color: #00BCD4; -fx-background-radius: 4em;" text="BENEFICE " textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

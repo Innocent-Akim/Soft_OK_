@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="977.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Interface_ficherStockController">
+   <children>
+      <HBox layoutX="15.0" layoutY="28.0">
+         <children>
+            <DatePicker fx:id="date_Debut" prefHeight="25.0" prefWidth="187.0" styleClass="textfiled" stylesheets="@../CSS/Object_Style.css">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </DatePicker>
+            <DatePicker fx:id="Date_Fin" styleClass="textfiled" stylesheets="@../CSS/Object_Style.css">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </DatePicker>
+         </children>
+      </HBox>
+      <JFXButton fx:id="printBtn" buttonType="RAISED" layoutX="427.0" layoutY="25.0" onAction="#_PrintFicherStock" prefHeight="29.0" prefWidth="103.0" style="-fx-background-radius: 4em; -fx-background-color: #022C44; -fx-border-radius: 4em;" text="Imprimer" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="25.0" layoutY="8.0" text="Date Debut">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Label>
+      <Label layoutX="233.0" layoutY="9.0" text="Date Fin">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Label>
+      <HBox layoutX="656.0" layoutY="22.0" prefHeight="36.0" prefWidth="317.0" style="-fx-border-color: #B5B5B5; -fx-border-radius: 4em;">
+         <children>
+            <TextField fx:id="SearchTfd" onKeyReleased="#_RechercherProduit" prefHeight="25.0" prefWidth="273.0" promptText="Rechercher" style="-fx-background-color: Transparent;">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </TextField>
+            <JFXButton buttonType="RAISED" prefHeight="25.0" prefWidth="24.0" style="-fx-background-color: #022C44; -fx-background-radius: 4em; -fx-border-radius: 4em;" textFill="#f5f4f4">
+               <HBox.margin>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <VBox layoutX="3.0" layoutY="97.0" prefHeight="486.0" prefWidth="968.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <Pagination fx:id="pagination" prefHeight="502.0" prefWidth="968.0" style="-fx-background-color: #FFFFFF;" />
+         </children>
+      </VBox>
+      <AnchorPane layoutX="5.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="968.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <HBox layoutX="6.0" layoutY="6.0" prefHeight="33.0" prefWidth="64.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="codeLbl" alignment="CENTER" prefHeight="15.0" prefWidth="85.0" text="Code">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="73.0" layoutY="6.0" prefHeight="33.0" prefWidth="178.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="desinationLbl" prefHeight="15.0" prefWidth="185.0" text="Designation">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="253.0" layoutY="6.0" prefHeight="33.0" prefWidth="85.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="categorieLbl" prefHeight="15.0" prefWidth="79.0" text="Categorie">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="338.0" layoutY="6.0" prefHeight="33.0" prefWidth="79.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="QteE" alignment="CENTER" prefHeight="15.0" prefWidth="85.0" text="Quantite">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="417.0" layoutY="6.0" prefHeight="33.0" prefWidth="51.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="PE" alignment="CENTER" prefHeight="15.0" prefWidth="43.0" text="P.A">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="465.0" layoutY="6.0" prefHeight="33.0" prefWidth="51.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="PTE" alignment="CENTER" prefHeight="15.0" prefWidth="85.0" text="P.T">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="516.0" layoutY="6.0" prefHeight="33.0" prefWidth="79.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="QtS" alignment="CENTER" prefHeight="15.0" prefWidth="85.0" text="Quantite">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="595.0" layoutY="6.0" prefHeight="33.0" prefWidth="51.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="PS" alignment="CENTER" prefHeight="15.0" prefWidth="85.0" text="P.V">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="PTS" layoutX="646.0" layoutY="6.0" prefHeight="33.0" prefWidth="51.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="PTS1" alignment="CENTER" prefHeight="15.0" prefWidth="85.0" text="P.T">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="697.0" layoutY="6.0" prefHeight="33.0" prefWidth="79.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="QteDispo" alignment="CENTER" prefHeight="15.0" prefWidth="85.0" text="Quantite">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="776.0" layoutY="6.0" prefHeight="33.0" prefWidth="51.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="PDispo" alignment="CENTER" prefHeight="15.0" prefWidth="85.0" text="P.D">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="827.0" layoutY="6.0" prefHeight="33.0" prefWidth="51.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="PTDis" alignment="CENTER" prefHeight="15.0" prefWidth="85.0" text="P.T.D">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="878.0" layoutY="6.0" prefHeight="33.0" prefWidth="85.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <Label fx:id="Date_Lbl" alignment="CENTER" prefHeight="15.0" prefWidth="85.0" text="Date">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="879.0" style="-fx-background-color: #CDCDCD;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Interface_helpController">
+   <children>
+      <Pane layoutX="27.0" layoutY="26.0" prefHeight="508.0" prefWidth="404.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="17.0" prefWidth="404.0" text="Mode d'installation de l'application ">
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="479.0" prefHeight="30.0" prefWidth="124.0" text="+243 977 748 166">
+               <graphic>
+                  <FontAwesomeIconView glyphName="WHATSAPP" size="15" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="138.0" layoutY="479.0" prefHeight="30.0" prefWidth="110.0" text="Jean akili">
+               <graphic>
+                  <FontAwesomeIconView glyphName="FACEBOOK" size="15" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="247.0" layoutY="479.0" prefHeight="30.0" prefWidth="159.0" text="Gentiakili98@gmail.com">
+               <graphic>
+                  <FontAwesomeIconView glyphName="GOOGLE" size="15" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="455.0" prefHeight="17.0" prefWidth="404.0" text="Pour plus d'information contact">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="49.0" prefHeight="17.0" prefWidth="323.0" text="- Condition d'avor le mot depasse de la setup" />
+            <Label layoutX="13.0" layoutY="66.0" prefHeight="17.0" prefWidth="323.0" text="- Il faut faire de suivant seulement" />
+         </children>
+      </Pane>
+      <Pane layoutX="440.0" layoutY="24.0" prefHeight="508.0" prefWidth="404.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="17.0" prefWidth="404.0" text="Mode d'utilisation de l'application">
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="479.0" prefHeight="30.0" prefWidth="124.0" text="+243 977 748 166">
+               <graphic>
+                  <FontAwesomeIconView glyphName="WHATSAPP" size="15" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="479.0" prefHeight="30.0" prefWidth="110.0" text="Jean akili">
+               <graphic>
+                  <FontAwesomeIconView glyphName="FACEBOOK" size="15" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="254.0" layoutY="479.0" prefHeight="30.0" prefWidth="159.0" text="Gentiakili98@gmail.com">
+               <graphic>
+                  <FontAwesomeIconView glyphName="GOOGLE" size="15" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="462.0" prefHeight="17.0" prefWidth="404.0" text="Pour plus d'information contact">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="42.0" prefHeight="17.0" prefWidth="228.0" text="Configuration " />
+            <Label layoutY="68.0" prefHeight="17.0" prefWidth="404.0" text="- Rapport : Cle (imprimer) Et  chemin d'acces" />
+            <Label layoutY="85.0" prefHeight="17.0" prefWidth="323.0" text="- Backup :  Cle (backup)    Et chemin d'acces" />
+            <Label layoutY="102.0" prefHeight="17.0" prefWidth="362.0" text="- barcode : Cle (codebar)  Et chemin de la ou stock le barcode" />
+            <Label layoutY="119.0" prefHeight="17.0" prefWidth="381.0" text="- Backup automatique:  Cle (url1) Et chemin de la ou stock le backup" />
+            <ImageView fitHeight="155.0" fitWidth="352.0" layoutX="12.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/configurationB.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="155.0" fitWidth="511.0" layoutX="18.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/loginSans.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="26.0" layoutY="537.0" prefHeight="15.0" prefWidth="404.0" text="Téléphone  +243 977 748 166, 979 076 416, 990 084 881, 9771 1674, 975 236 270">
+         <font>
+            <Font name="Century Gothic Bold" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="440.0" layoutY="537.0" prefHeight="15.0" prefWidth="404.0" text="Concis en republique democratique du congo(RDC) précisément à l'ISIG-Goma ">
+         <font>
+            <Font name="Century Gothic Bold" size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

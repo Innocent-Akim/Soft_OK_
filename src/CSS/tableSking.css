@@ -1,0 +1,115 @@
+
+.table-view, tree-table-view{
+    -fx-table-color: transparent;
+    /*-fx-table-rippler-color: #3772F2;*/
+    /*-fx-table-header-border-color : #031F38;*/
+    -fx-background-color: transparent;
+}
+
+.table-view:focused .table-row-cell:selected{
+    -fx-background-color: #14ABF4;
+    -fx-table-cell-border-color: #14ABF4;
+}
+
+.table-view:focused .table-row-cell:selected .table-cell{
+    -fx-text-fill: white;
+}
+
+/*.tree-table-view .jfx-ripple{
+  -fx-ripple-fill: -fx-tree-table-rippler-color;
+}*/
+/*header*/
+.table-view .colunm-header,
+.table-view .column-header-background,
+.table-view .column-header-background .filler{
+    -fx-background-color: #14ABF4;
+}
+
+/*.table-view .colunm-header{
+    -fx-border-width: 0 1 0 1;
+    -fx-border-color: #47A2F3;
+}*/
+
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-padding: 2 2 2 2;
+    -fx-background-color: #022E47;
+}
+
+.tree-table-view .column-header .arrow,
+.tree-table-view .column-header .sort-order-dot{
+  -fx-background-color: white;
+}
+
+.table-view .column-header:last-visibe{
+    -fx-border-width: 0 2 0 1;
+}
+
+/*.table-view .column-header-background{
+    -fx-border-width: 0 0.0 1 0;
+    -fx-border-color:#47A2F3; underline 
+}*/ 
+
+.table-view .table-cell{
+    -fx-border-width: 0 0 0 0;
+    -fx-padding: 5 0 5 0;
+}
+
+.table-view .column-overlay{
+    -fx-background-color: #031F38;
+}
+
+/*.table-view .column-resizeline,
+.table-view .column-drag-header{
+    -fx-background-color: #3772F2;
+}*/
+
+.table-view:focused{
+    -fx-background-color: transparent;
+    -fx-background-insets: -1.4, 0, 1;
+    -fx-background-radius: 4, 4, 4;
+    -fx-padding: 1;
+}
+
+.table-row-cell > .tree-disclosure-node > .arrow{
+    -fx-background-color: #3772F2;
+    -fx-padding: 0.333333em 0.229em 0.333333em 0.229em;
+    -fx-shape: "M O -3.5 L 4 O L 3.5 z";
+}
+
+.table-row-cell .text-field{
+    -fx-focus-color: #3772F2;
+}
+
+
+.pretty-list-view > .virtual-flow > .scroll-bar,
+.pretty-list-view > .virtual-flow > .scroll-bar .decrement-arrow,
+.pretty-list-view > .virtual-flow > .scroll-bar .increment-arrow,
+.pretty-list-view > .virtual-flow > .scroll-bar .decrement-button,
+.pretty-list-view > .virtual-flow > .scroll-bar .increment-button {
+-fx-pref-width: 0;
+-fx-pref-height: 0;
+}
+.pretty-list-view .pretty-scroll-bar:vertical .thumb {
+-fx-background-insets: 0 2 0 0;
+}
+.pretty-list-view .pretty-scroll-bar:horizontal .thumb {
+-fx-background-insets: 0 0 2 0;
+}
+.pretty-list-view .pretty-scroll-bar .decrement-arrow,
+.pretty-list-view .pretty-scroll-bar .increment-arrow {
+-fx-pref-width: 0;
+-fx-pref-height: 0;
+}
+.pretty-list-view .pretty-scroll-bar {
+-fx-background-color: transparent;
+-fx-pref-width: 12;
+-fx-pref-height: 12;
+-fx-padding: 2;
+}
+.pretty-list-view .pretty-scroll-bar .thumb {
+-fx-background-color: rgba(0, 0, 0, .2);
+-fx-background-radius: 1000;
+-fx-pref-width: 12;
+-fx-pref-height: 12;
+}

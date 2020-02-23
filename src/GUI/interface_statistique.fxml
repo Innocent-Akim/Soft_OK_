@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="879.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Interface_statistiqueController">
+   <children>
+      <AreaChart fx:id="StackedAreaChart" alternativeColumnFillVisible="true" layoutX="58.0" layoutY="209.0" legendSide="LEFT" prefHeight="315.0" prefWidth="434.0" style="-fx-background-color: #ffffff;" title="RAPPORT DE VENTE" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="209.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <HBox layoutX="93.0" layoutY="43.0" prefHeight="45.0" prefWidth="425.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="361.0">
+         <children>
+            <DatePicker fx:id="dateDebut" prefHeight="25.0" prefWidth="143.0" promptText="Date debut" style="-fx-background-radius: 20;">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </DatePicker>
+            <DatePicker fx:id="dateFin" prefHeight="25.0" prefWidth="145.0" promptText="Date fin" style="-fx-background-radius: 20;">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </DatePicker>
+            <JFXButton fx:id="avalidationBtn" buttonType="RAISED" onAction="#valider" prefHeight="25.0" prefWidth="102.0" style="-fx-background-radius: 20;" styleClass="btn" stylesheets="@../CSS/btn.css" text="Valider ">
+               <graphic>
+                  <FontAwesomeIconView glyphName="YEN" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <JFXButton fx:id="printOk" buttonType="RAISED" layoutX="512.0" layoutY="54.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#valider" style="-fx-background-radius: 20;" styleClass="btn" stylesheets="@../CSS/btn.css" text="Imprimer" AnchorPane.rightAnchor="285.0">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="PRINT" />
+         </graphic>
+      </JFXButton>
+      <Pane layoutX="616.0" layoutY="33.0" prefHeight="65.0" prefWidth="218.0" style="-fx-background-color: #2F3241;" AnchorPane.rightAnchor="45.0">
+         <children>
+            <Label fx:id="MontantConcerner" alignment="CENTER" layoutX="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="51.0" prefWidth="227.0" style="-fx-background-color: #FFFFFF;" text="00" textFill="#252323">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Montant rapport de vente">
+               <graphic>
+                  <FontAwesomeIconView glyphName="DOLLAR" />
+               </graphic>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <PieChart fx:id="graphe_statique" layoutX="567.0" layoutY="207.0" prefHeight="315.0" prefWidth="380.0" style="-fx-background-color: #ffffff;" title="STATISTIQUE" AnchorPane.bottomAnchor="33.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="207.0" />
+      <HBox layoutX="617.0" layoutY="176.0" prefHeight="25.0" prefWidth="167.0" AnchorPane.rightAnchor="95.0">
+         <children>
+            <JFXComboBox fx:id="comboxCategorie" prefHeight="25.0" prefWidth="194.0" promptText="Categorie" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+      <Pane layoutX="616.0" layoutY="105.0" prefHeight="65.0" prefWidth="227.0" style="-fx-background-color: #ffffff;" AnchorPane.rightAnchor="36.0">
+         <children>
+            <Label fx:id="MontantConcerner1" alignment="CENTER" layoutX="-2.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="219.0" text="00" textFill="#111111">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Montant  statistique de vente">
+               <graphic>
+                  <FontAwesomeIconView fill="#252525" glyphName="DOLLAR" />
+               </graphic>
+            </Label>
+            <Label fx:id="pourcentage_statique" alignment="CENTER" layoutX="1.0" layoutY="48.0" prefHeight="17.0" prefWidth="227.0" style="-fx-background-color: #FFFFFF;" text="00 %">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="pourcentage_rapport" alignment="CENTER" layoutX="-2.0" layoutY="-24.0" prefHeight="17.0" prefWidth="227.0" style="-fx-background-color: #FFFFFF;" text="00 %">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="93.0" layoutY="532.0" prefHeight="4.0" prefWidth="398.0" style="-fx-background-color: #2F3241;" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="388.0" />
+      <Pane layoutX="495.0" layoutY="532.0" prefHeight="4.0" prefWidth="380.0" style="-fx-background-color: #00aac0;" AnchorPane.bottomAnchor="19.0" AnchorPane.rightAnchor="4.0" />
+   </children>
+</AnchorPane>

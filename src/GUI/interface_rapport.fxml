@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="879.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Interface_rapportController">
+   <children>
+      <TableView fx:id="tableRapport" layoutX="6.0" layoutY="224.0" prefHeight="337.0" prefWidth="873.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <contextMenu>
+            <ContextMenu fx:id="Menu_Contexte">
+              <items>
+                <MenuItem fx:id="Click_Supprimer" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+                  <MenuItem mnemonicParsing="false" text="Imprimer" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <JFXButton fx:id="printT" layoutX="747.0" layoutY="119.0" onAction="#FonctionPrint_" prefHeight="91.0" prefWidth="108.0" style="-fx-border-radius: 4em; -fx-background-radius: 4em; -fx-background-color: #FBE075;" text="Imprimer">
+         <graphic>
+            <FontAwesomeIconView glyphName="PRINT" size="30" />
+         </graphic>
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </JFXButton>
+      <HBox alignment="CENTER" layoutX="52.0" layoutY="54.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="52.0">
+         <children>
+            <RadioButton fx:id="vente_produit" mnemonicParsing="false" onAction="#Afficher_Vente" onMouseEntered="#repportProduit" text="Rapport de vente" textFill="#070707">
+               <toggleGroup>
+                  <ToggleGroup fx:id="GroupeButton" />
+               </toggleGroup>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="produit_disponible" mnemonicParsing="false" onAction="#Afficher_Produit" text="Rapport de prouit" textFill="#070707" toggleGroup="$GroupeButton">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="approvi" mnemonicParsing="false" onAction="#chargerAprov" text="Rapport approvi" textFill="#070707" toggleGroup="$GroupeButton">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="facture_annule" mnemonicParsing="false" onAction="#AfficherFact_supprimerrrrrrrrr" prefHeight="17.0" prefWidth="169.0" text="Commandes Annnulée" textFill="#070707" toggleGroup="$GroupeButton">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </RadioButton>
+            <Hyperlink fx:id="HyperClic" onAction="#AppelFicher" prefHeight="23.0" prefWidth="116.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" text="Ficher de stock" textFill="#171717">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </HBox>
+      <Label layoutX="24.0" layoutY="12.0" prefHeight="20.0" prefWidth="145.0" text="Ropport Complet" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="710.0" AnchorPane.topAnchor="12.0">
+         <font>
+            <Font name="Century Gothic" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="24.0" layoutY="31.0" prefHeight="3.0" prefWidth="135.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="720.0" AnchorPane.topAnchor="31.0" />
+      <VBox layoutX="552.0" layoutY="120.0">
+         <children>
+            <DatePicker fx:id="date_Debut" promptText="Debut">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </DatePicker>
+            <DatePicker fx:id="Date_Fin" promptText="Fin">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </DatePicker>
+         </children>
+      </VBox>
+      <Pane fx:id="produitExpire" layoutX="169.0" layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="539.0" />
+      <Label fx:id="Montant_Total" layoutX="52.0" layoutY="146.0" prefHeight="37.0" prefWidth="504.0" text="00" textFill="#00aac0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_US_Dollar_16.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Pane layoutX="52.0" layoutY="180.0" prefHeight="3.0" prefWidth="504.0" style="-fx-background-color: #313444;" />
+      <Pane layoutX="52.0" layoutY="145.0" prefHeight="3.0" prefWidth="504.0" style="-fx-background-color: #313444;" />
+      <Label layoutX="52.0" layoutY="183.0" text="Fin" />
+      <Label layoutX="52.0" layoutY="128.0" text="Debut" />
+      <JFXComboBox fx:id="choixCombox" layoutX="745.0" layoutY="91.0" prefHeight="25.0" prefWidth="82.0" promptText="Choissir" />
+      <Label layoutX="618.0" layoutY="98.0" text="Numero commande">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

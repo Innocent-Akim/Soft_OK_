@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="progressBarOk" prefHeight="84.0" prefWidth="571.0" style="-fx-background-color: #FFF2DA;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Interface_progressBarController">
+   <children>
+      <ProgressBar fx:id="progressebar_" layoutX="4.0" layoutY="35.0" prefHeight="19.0" prefWidth="564.0" progress="0.0" />
+      <ProgressIndicator fx:id="progressbar02" layoutX="265.0" layoutY="35.0" prefHeight="19.0" prefWidth="44.0" progress="0.0">
+         <effect>
+            <Reflection />
+         </effect>
+      </ProgressIndicator>
+      <Label alignment="CENTER" layoutX="5.0" layoutY="3.0" opacity="0.16" prefHeight="28.0" prefWidth="564.0" text=" SOLUTION DE GESTION ADAPTER A VOTRE METIER" textFill="#010700">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="3.0" layoutY="71.0" text="By Akilimali cizungu Innocent">
+         <font>
+            <Font name="Bradley Hand ITC" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="509.0" layoutY="71.0" text="MamuSoft ">
+         <font>
+            <Font name="Bradley Hand ITC" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

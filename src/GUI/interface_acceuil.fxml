@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPopup?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="acceuill" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="879.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Interface_acceuilController">
+   <children>
+      <Label alignment="CENTER" layoutX="427.0" layoutY="244.0" prefHeight="58.0" prefWidth="71.0" text="P">
+         <font>
+            <Font name="Segoe UI Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="396.0" layoutY="232.0" prefHeight="126.0" prefWidth="133.0" text="H" textFill="#bf2525">
+         <font>
+            <Font name="Segoe UI Bold" size="100.0" />
+         </font>
+      </Label>
+      <Separator layoutX="428.0" layoutY="341.0" prefHeight="1.0" prefWidth="97.0" />
+      <Label layoutX="29.0" layoutY="-2.0" />
+      <Pane fx:id="contenairePn1" layoutY="428.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="126.0" prefWidth="879.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ListView fx:id="list" editable="true" layoutX="8.0" layoutY="175.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.34" prefHeight="240.0" prefWidth="379.0" style="-fx-background-color: #FFF;" AnchorPane.leftAnchor="8.0" />
+      <Label fx:id="clicIci" alignment="CENTER" layoutX="71.0" layoutY="144.0" onMouseClicked="#ActionExpiration" prefHeight="27.0" prefWidth="236.0" styleClass="hyperlink" stylesheets="@../CSS/main.css" text="Medicaments Perimes" textFill="#ddd6d6">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#ddd6d6" glyphName="YEN" size="15" />
+         </graphic>
+      </Label>
+      <Label layoutX="491.0" layoutY="314.0" prefHeight="24.0" prefWidth="45.0" text="Soft">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <ListView fx:id="list1" editable="true" layoutX="551.0" layoutY="176.0" opacity="0.34" prefHeight="240.0" prefWidth="342.0" style="-fx-background-color: #FFF;" AnchorPane.rightAnchor="6.0" />
+      <Label alignment="CENTER" layoutX="594.0" layoutY="144.0" prefHeight="27.0" prefWidth="236.0" styleClass="hyperlink" stylesheets="@../CSS/main.css" text="Medicament non disponible" textFill="#ddd6d6">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="8.0" layoutY="136.0" prefHeight="3.0" prefWidth="870.0" />
+      <Separator layoutX="8.0" layoutY="427.0" prefHeight="3.0" prefWidth="870.0" />
+      <JFXPopup fx:id="popupemperation" layoutX="10.0" layoutY="169.0" prefHeight="27.0" prefWidth="379.0" AnchorPane.bottomAnchor="359.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="490.0" AnchorPane.topAnchor="169.0" />
+      <Pane fx:id="contenairePn11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="126.0" prefWidth="879.0" style="-fx-background-color: #FFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ImageView fitHeight="145.0" fitWidth="133.0" layoutX="392.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/iStock_000020695792XSmall.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="169.0" fitWidth="133.0" layoutX="392.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new_Fotolia_42752.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

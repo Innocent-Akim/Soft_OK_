@@ -1,0 +1,231 @@
+
+
+/*// Color Bar Form*/
+.Gradien{
+    -fx-border-width: 1px 1px 1px 1px;
+    -fx-border-color:  #F5F6FA;   
+}
+
+.Border{
+    -fx-background-color: linear-gradient(to left,#E2E3E3,#E2E3E4, #E2E3E3,#E2E3E3,#E2E3E3,#E3E4E5,#E3E4E5,#E2E2E3,#E2E2E4,#E4E4E5,#E4E4E5,#E4E4E5,#E5E4E6,#E5E4E6,#E5E4E6,#E5E4E6,#E5E4E6,#E5E6E7,#E5E6E7,#E6E7E8,#E6E7E7,#E6E7E8,#E6E7E8);
+}
+.BordRight{
+    -fx-border-width: 0px 2px 0px 0px;
+    -fx-border-color:  #F5F6FA;
+}
+.AllBord{
+    -fx-border-width: 1px 1px 1px 1px;
+    -fx-border-color:  #EEEEF1;
+}
+.UpDaownBord{
+    -fx-border-width: 1px 0px 1px 0px;
+    -fx-border-color:  #EEEEF1;
+}
+.UpBord{
+    -fx-border-width: 1px 0px 0px 0px;
+    -fx-border-color:  #EEEEF1;
+}
+.BordLeft{
+    -fx-background-color:white;
+    -fx-border-width: 0px 0px 0px 1px;
+    -fx-border-color:  #F5F6FA;
+}
+.BordDown{
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color:  #EEE;
+}
+
+.Bmenu:hover{
+    -fx-background-color:#EEE;
+    -fx-cursor:hand;
+}
+
+.HandCursor{
+    -fx-cursor:hand;  
+}
+
+/*Humeburger Styles*/
+/*.jfx-hamburger {
+    -fx-background-color:white;
+}
+
+.jfx-hamburger StackPane {
+    -fx-background-color: #9B836A;
+}*/
+/*TextFiledStyles*/
+
+.textfiled{
+    -fx-background-color:white;
+    -fx-border-style:solid ;
+    -fx-border-radius: 15px;
+    -fx-border-color: #E3E3E3;
+    -fx-text-fill:#868686;
+}
+.SimpleTxt{
+    -fx-text-fill:#868686;
+}
+.whiteText{
+    -fx-text-fill:white;
+}
+/*Button*/
+
+.ResetSelected{
+    -fx-border-style:none ;
+    -fx-text-fill:#05293e;
+    -fx-text-align:center;
+    -fx-background-color:white;
+}
+.Ligne{
+    -fx-text-align:Center;
+}
+
+.BtnSelected{
+    -fx-background-radius:5px;
+    -fx-text-fill:#FFF;
+    -fx-background-color: #022E47;
+    -fx-border-style:none ;
+}
+
+.Bt{
+    -fx-background-color:white;
+    -fx-border-width: 1px 1px 1px 1px;
+    -fx-border-radius:0.5em;
+    -fx-border-color: #E3E3E3;
+    -fx-text-fill:#868686;
+
+}
+.Bt:hover{
+    -fx-border-style:none ;
+    -fx-background-radius:0.5em;
+    -fx-text-fill:#FFF;
+    -fx-background-color:#9B836A;
+}
+.ButtonB{
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color:  #F5F6FA;
+}
+.Bmenu{
+    -fx-background-color:white;
+}
+.Bmenu:hover{
+    -fx-background-color:#EEEEEE;
+    -fx-cursor:hand;
+}
+
+.button-popup-menu{
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #39C3DD;
+}
+/*-------------------------------------------*/
+header
+{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 25px;	
+}
+
+#info
+{
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+a{
+    color: #074E8C;
+}
+
+.pagination > .pagination-control > .control-box > .number-button,
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-background-insets: 0, 1;
+    -fx-background-color: lightgray, #FAFAFA;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+/* Colors on hover */
+.pagination > .pagination-control > .control-box > .number-button:hover,
+.pagination > .pagination-control > .control-box > .bullet-button:hover,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-background-insets: 0;
+    -fx-background-color: lightgray;
+}
+
+/* Selected toggle color */
+.pagination > .pagination-control > .control-box > .number-button:selected,
+.pagination > .pagination-control > .control-box > .bullet-button:selected{
+    -fx-background-insets: 0;
+    -fx-background-color: #05293E;
+    -fx-text-fill: white;
+}
+/*HBox search*/
+.Hbox{
+    -fx-background-color:#EEE;
+    -fx-border-style:solid ;
+    -fx-border-radius: 15px;
+    -fx-border-color: #C2C3C8;
+    -fx-text-fill:#868686;
+}
+.Search{
+    -fx-background-color:white;
+    -fx-text-fill:#868686;
+}
+
+/*tab*/
+.tab
+{
+    -fx-pref-width: 105;
+    -fx-pref-height: 35;
+    -fx-background-color:  #55A376;
+}
+
+.tab-header-background{
+    /*-fx-background-color: #4A9BF0;*/
+    -fx-background-color: #55A376;
+}
+
+/*Styles Button Ra*/
+.style-option-button{
+    -fx-pref-width:50px;
+    -fx-background-color:#05293e;
+    -fx-background-radius:5px;
+    -fx-pref-height:50px;
+    -fx-text-color:white;
+    -fx-border-color:white;
+    -fx-border-radius:5px;
+    -fx-border-width:4px;
+}
+.style2-option-button{  
+    -fx-background-color:white;
+    -fx-background-radius:5px;
+
+}
+/*Assistance Message*/ 
+.Error{
+    -fx-fill:#E04343;
+}
+.net{
+    -fx-fill:#1e446c;
+}
+.AError{
+    -fx-text-fill:#E04343;
+}
+.Anet{
+    -fx-text-fill:#1e446c;
+}
+/*Login*/
+.log{
+    -fx-fill :linear-gradient(to left,#F5B480,#FBC276,#F5B57F,#F2AE84,#EB9F8D,#EA9C8F,#E69395,#E48C99,#D87E99,#D27798,#D974A8,#D56CAF,#D367B2,#CF5FB7,#CA53BD,#C953BE,#BF50C2,#BF50C2,#B551C3,#B551C3,#AB51C4,#A252C5,#9A53C6,#9453C7,#9453C7,#8953C8,#8254C9,#7F54C9,#7955CA,#7955CA,#7955CA,#7954CA,#7954CA,#7955CA);
+}
+.linear2{
+    -fx-fill: linear-gradient(to right,#8963F1,#7C6FEF,#7872EF,#7079EE,#6186EC,#578FEA,#479DE8,#459FE8,#459FE8,#34ADE6,#34ADE6);
+}
+.linear3{
+    -fx-fill: linear-gradient(to left,#DE1BFC,#CE28FA,#C331F8,#C331F8,#B53EF7,#A64AF5,#9E51F4,#9359F2,#8C61F1,#8765F0,#7B6FEF,#7773EF,#697FEC,#6186EC);
+}
+.linear4{
+    -fx-fill: linear-gradient(to left,#11CCE1,#26B9E4,#4F95E9);
+}

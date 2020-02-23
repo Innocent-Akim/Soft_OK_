@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="389.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Interface_clientController">
+    <children>
+        <HBox layoutX="7.0" layoutY="10.0" prefHeight="38.0" prefWidth="380.0" style="-fx-border-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;">
+            <children>
+                <TextField fx:id="Recher_Tfd" onKeyReleased="#rechercher_" prefHeight="26.0" prefWidth="408.0" promptText="Rechercher" style="-fx-background-color: Transparent;">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="Century Gothic" size="13.0" />
+                    </font>
+                </TextField>
+                <JFXButton buttonType="RAISED" prefHeight="25.0" prefWidth="13.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="SEARCH" size="12" />
+                    </graphic>
+                </JFXButton>
+            </children>
+        </HBox>
+        <HBox layoutX="5.0" layoutY="51.0">
+            <children>
+                <TableView fx:id="tableClient" onMouseClicked="#ClicClient_" prefHeight="381.0" prefWidth="380.0">
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="C1" />
+                        <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

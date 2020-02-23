@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="379.0" style="-fx-background-color: #fff;" styleClass="btn" stylesheets="@../CSS/btn.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Interface_produitPerimeController">
+   <children>
+      <RadioButton fx:id="dans_" layoutX="9.0" layoutY="34.0" mnemonicParsing="false" onAction="#_perimes" prefHeight="26.0" prefWidth="90.0" selected="true" styleClass="hyperlink" stylesheets="@../CSS/main.css" text="Perimes" textFill="#022c44">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Group" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="dans_7" layoutX="102.0" layoutY="36.0" mnemonicParsing="false" onAction="#dans_7" styleClass="hyperlink" stylesheets="@../CSS/main.css" text="Dans 3 mois" textFill="#022c44" toggleGroup="$Group">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font></RadioButton>
+      <Label fx:id="etiquete" layoutX="14.0" layoutY="6.0" prefHeight="18.0" prefWidth="205.0" text="PEREMPTION" textFill="#eee9e9">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="imprimer_" layoutX="250.0" layoutY="349.0" onAction="#imprimer_produi" prefHeight="18.0" prefWidth="121.0" style="-fx-background-color: #747680;" styleClass="hyperlink" stylesheets="@../CSS/main.css" text="Print" textFill="#f8f7f7">
+         <graphic>
+            <FontAwesomeIconView fill="#eeeaea" glyphName="PRINT" size="15" />
+         </graphic>
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </JFXButton>
+      <Pane layoutX="11.0" layoutY="65.0" prefHeight="1.0" prefWidth="337.0" style="-fx-background-color: #fff;" />
+      <RadioButton fx:id="requisition" layoutX="220.0" layoutY="38.0" mnemonicParsing="false" onAction="#aide_requ" styleClass="hyperlink" stylesheets="@../CSS/main.css" text="Aide requisition" textFill="#022c44" toggleGroup="$Group">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </RadioButton>
+      <TableView fx:id="tabl_requi" layoutX="6.0" layoutY="115.0" prefHeight="219.0" prefWidth="365.0" stylesheets="@../CSS/tableSking.css">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

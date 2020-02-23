@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="JavaFXApplication4PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>newpackage.Tclient</class>
+    <class>newpackage.Tproduit</class>
+    <class>newpackage.Tfournir</class>
+    <class>newpackage.Tvente</class>
+    <class>newpackage.Tcategorie</class>
+    <class>newpackage.Tfournisseur</class>
+    <class>newpackage.TventeD</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://AKIM;databaseName=GESTION_VENTE"/>
+      <property name="javax.persistence.jdbc.user" value="SA"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="javax.persistence.jdbc.password" value="AA1"/>
+    </properties>
+  </persistence-unit>
+</persistence>

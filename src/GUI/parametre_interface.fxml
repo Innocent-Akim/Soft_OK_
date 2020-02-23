@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Parametre_interfaceController">
+    <children>
+        <JFXTabPane layoutX="174.0" layoutY="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="Identification">
+                    <content>
+                        <AnchorPane fx:id="identification" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="520.0" prefWidth="879.0" style="-fx-background-color: #FFFFFF;" styleClass="tab1-header-background" stylesheets="@../CSS/css_tab_pane.css">
+                            <children>
+                                <VBox layoutX="38.0" layoutY="70.0" prefHeight="129.0" prefWidth="267.0" AnchorPane.bottomAnchor="321.0" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="70.0">
+                                    <children>
+                                        <JFXTextField fx:id="nomTfd" labelFloat="true" promptText="Nom">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="12.0" />
+                                            </font>
+                                        </JFXTextField>
+                                        <JFXTextField fx:id="postnomTfd" labelFloat="true" promptText="Post-nom">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="12.0" />
+                                            </font>
+                                        </JFXTextField>
+                                        <JFXTextField fx:id="prenomTfd" labelFloat="true" promptText="Prenom">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="12.0" />
+                                            </font>
+                                        </JFXTextField>
+                                    </children>
+                                </VBox>
+                                <JFXButton fx:id="btnmodifier" buttonType="RAISED" layoutX="243.0" layoutY="221.0" onAction="#traitement_parametrer" prefHeight="25.0" prefWidth="83.0" style="-fx-background-radius: 4em; -fx-border-radius: 4em; -fx-background-color: #FBE075;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="Modifier">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="12.0" />
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" />
+                                    </graphic>
+                                </JFXButton>
+                                <Label layoutX="625.0" layoutY="246.0" prefHeight="24.0" prefWidth="226.0">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="SEARCH" />
+                                    </graphic>
+                                    <font>
+                                        <Font name="System Italic" size="12.0" />
+                                    </font>
+                                </Label>
+                                <JFXTextField fx:id="rechercherAgent" labelFloat="true" layoutX="634.0" layoutY="242.0" maxWidth="227.0" minWidth="221.0" onKeyReleased="#rechrecher_" prefHeight="31.0" prefWidth="221.0" promptText="Search">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXButton fx:id="btnenregistre" buttonType="RAISED" layoutX="160.0" layoutY="220.0" onAction="#traitement_parametrer" prefHeight="25.0" prefWidth="77.0" style="-fx-background-radius: 4em; -fx-border-radius: 4em; -fx-background-color: #FBE075;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="Ajouter">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="12.0" />
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="SAVE" />
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton fx:id="btnsupprimer" buttonType="RAISED" layoutX="331.0" layoutY="221.0" onAction="#traitement_parametrer" prefHeight="25.0" prefWidth="97.0" style="-fx-background-radius: 4em; -fx-border-radius: 4em; -fx-background-color: #FBE075;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="Supprimer">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="12.0" />
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="UNDO" />
+                                    </graphic>
+                                </JFXButton>
+                                <HBox layoutX="178.0" layoutY="17.0" prefHeight="20.0" prefWidth="306.0" stylesheets="@../CSS/cssMenus.css">
+                                    <opaqueInsets>
+                                        <Insets left="10.0" right="10.0" />
+                                    </opaqueInsets>
+                                    <children>
+                                        <RadioButton fx:id="agentBtnR" mnemonicParsing="false" onAction="#inserserEnter" prefHeight="17.0" prefWidth="67.0" selected="true" style="-fx-background-color: #FBFDFE;" text="Agent" textFill="#0a0a0a">
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                            </HBox.margin>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="groupeBtn" />
+                                            </toggleGroup>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="USER" />
+                                            </graphic>
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton fx:id="ClientBtnR" mnemonicParsing="false" onAction="#InsertClient" prefHeight="17.0" prefWidth="67.0" style="-fx-background-color: #FBFDFE;" text="Client" textFill="#0a0a0a" toggleGroup="$groupeBtn">
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                            </HBox.margin>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="USER" />
+                                            </graphic>
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton fx:id="FssBtnR" mnemonicParsing="false" onAction="#InsertFournisseur" prefHeight="17.0" prefWidth="99.0" style="-fx-background-color: #FBFDFE;" text="Fournisseur" textFill="#0a0a0a" toggleGroup="$groupeBtn">
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                            </HBox.margin>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="USER" />
+                                            </graphic>
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                            </font>
+                                        </RadioButton>
+                                    </children>
+                                </HBox>
+                                <Label fx:id="partirConnecter" layoutX="3.0" layoutY="2.0" prefHeight="27.0" prefWidth="178.0" text="nouveau" textFill="#00bcd4" AnchorPane.leftAnchor="3.0">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="25.0" />
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#00bcd4" glyphName="GG" size="20" />
+                                    </graphic>
+                                </Label>
+                                <VBox layoutX="328.0" layoutY="70.0" prefHeight="123.0" prefWidth="268.0">
+                                    <children>
+                                        <JFXTextField fx:id="contactTfd" labelFloat="true" promptText="Contact">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="12.0" />
+                                            </font>
+                                        </JFXTextField>
+                                        <JFXTextField fx:id="adressTfd" labelFloat="true" promptText="Adresse">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="12.0" />
+                                            </font>
+                                        </JFXTextField>
+                                        <JFXTextField fx:id="email_Tfd" labelFloat="true" promptText="E-mail">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="12.0" />
+                                            </font>
+                                        </JFXTextField>
+                                    </children>
+                                </VBox>
+                                <JFXButton fx:id="btnprintIdentification" buttonType="RAISED" layoutX="436.0" layoutY="222.0" onAction="#traitement_parametrer" prefHeight="25.0" prefWidth="86.0" style="-fx-background-radius: 4em; -fx-border-radius: 4em; -fx-background-color: #FBE075;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="Imprimer">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="12.0" />
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="PRINT" />
+                                    </graphic>
+                                </JFXButton>
+                                <Separator layoutX="4.0" layoutY="32.0" prefHeight="2.0" prefWidth="155.0" style="-fx-background-color: #00BCD4;" AnchorPane.leftAnchor="4.0" />
+                                <FontAwesomeIconView fill="#00bcd4" glyphName="USERS" layoutX="712.0" layoutY="119.0" size="80" />
+                        <TableView fx:id="table_client" layoutX="29.0" layoutY="273.0" onMouseClicked="#mouse_clic_table" prefHeight="242.0" prefWidth="822.0" stylesheets="@../CSS/tableSking.css">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Gestion des utilisateurs">
+                    <content>
+                        <AnchorPane fx:id="gestionUtilisateur" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="879.0" style="-fx-background-color: #FFF;">
+                            <children>
+                            
+                                <VBox fx:id="contener_agent" layoutX="82.0" layoutY="59.0" prefHeight="46.0" prefWidth="287.0" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="510.0" AnchorPane.topAnchor="59.0">
+                                    <children>
+                                        <JFXTextField fx:id="idAgent" editable="false" maxWidth="272.0" minWidth="219.0" prefHeight="32.0" prefWidth="242.0" promptText="ID ">
+                                            <font>
+                                                <Font name="Century Gothic" size="13.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                        </JFXTextField>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="388.0" layoutY="21.0" prefHeight="137.0" prefWidth="279.0">
+                                    <children>
+                                        <JFXTextField fx:id="Username" maxWidth="272.0" minWidth="231.0" prefHeight="31.0" prefWidth="272.0" promptText="Username">
+                                            <font>
+                                                <Font name="Century Gothic" size="13.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="10.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                        </JFXTextField>
+                                        <JFXPasswordField fx:id="password" maxWidth="301.0" minWidth="259.0" prefHeight="32.0" prefWidth="259.0" promptText="Password">
+                                            <font>
+                                                <Font name="Century Gothic" size="13.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                        </JFXPasswordField>
+                                        <ComboBox fx:id="permissiom" prefHeight="25.0" prefWidth="250.0" promptText="Fonction">
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                        </ComboBox>
+                                    </children>
+                                </VBox>
+                                <JFXTextField fx:id="niveaut1" layoutX="93.0" layoutY="38.0" maxWidth="272.0" minWidth="231.0" onKeyReleased="#rechrecherAgent_" prefHeight="32.0" prefWidth="263.0" promptText="Nom">
+                                    <font>
+                                        <Font name="Century Gothic" size="13.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXButton fx:id="validerPermission" buttonType="RAISED" layoutX="442.0" layoutY="230.0" onAction="#traitement_parametrer" prefHeight="28.0" prefWidth="172.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" text="Valider">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#0d0d0d" glyphName="USER" size="20" />
+                                    </graphic>
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </JFXButton>
+                        <TableView fx:id="Tbpermission" layoutX="12.0" layoutY="278.0" onMouseClicked="#clicTable_utilisateur" prefHeight="240.0" prefWidth="852.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem fx:id="retireMnItm" mnemonicParsing="false" onAction="#retire_fonction" text="Retire l'utilisateur" />
+                                    <CheckMenuItem mnemonicParsing="false" text="Unspecified Action" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <TableView fx:id="tableAgentLogin" layoutX="82.0" layoutY="60.0" onMouseClicked="#recupereId" prefHeight="218.0" prefWidth="292.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Gestion de la Caisse">
+                    <content>
+                        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FFF;">
+                            <children>
+                                <HBox layoutX="48.0" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="816.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="76.0">
+                                    <children>
+                                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="818.0" style="-fx-background-color: #FFF;">
+                                            <children>
+                                                <Pane layoutX="262.0" layoutY="86.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="244.0" style="-fx-background-color: #FFFFFF;">
+                                                    <children>
+                                                        <Label fx:id="montatDisponible" alignment="CENTER" layoutX="-1.0" layoutY="19.0" prefHeight="61.0" prefWidth="244.0" text="00" textFill="#00aac0">
+                                                            <font>
+                                                                <Font name="System Bold" size="36.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label alignment="CENTER" layoutX="-1.0" layoutY="1.0" prefHeight="27.0" prefWidth="236.0" text="Montat disponible" textFill="#ddd6d6">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <effect>
+                                                        <DropShadow />
+                                                    </effect>
+                                                </Pane>
+                                                <Pane layoutX="557.0" layoutY="86.0" prefHeight="90.0" prefWidth="244.0" style="-fx-background-color: #FFFFFF;">
+                                                    <children>
+                                                        <Label fx:id="perimer1" alignment="CENTER" layoutX="-1.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0" prefWidth="244.0" text="00" textFill="#00aac0">
+                                                            <font>
+                                                                <Font name="System Bold" size="36.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label alignment="CENTER" layoutX="-1.0" prefHeight="27.0" prefWidth="247.0" text="Montat sorti " textFill="#ddd6d6">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <effect>
+                                                        <DropShadow />
+                                                    </effect>
+                                                </Pane>
+                                                <JFXTextField fx:id="montatSorti" labelFloat="true" layoutX="6.0" layoutY="41.0" maxHeight="-Infinity" maxWidth="226.0" minHeight="-Infinity" minWidth="149.0" onKeyReleased="#refus_number" prefHeight="37.0" prefWidth="186.0" promptText="Entre le montat">
+                                                    <font>
+                                                        <Font name="Century Gothic Bold" size="14.0" />
+                                                    </font>
+                                                </JFXTextField>
+                                                <JFXTextArea fx:id="MotifText" accessibleRole="LIST_ITEM" focusTraversable="false" labelFloat="true" layoutX="13.0" layoutY="83.0" maxWidth="273.0" minWidth="206.0" opacity="0.5" prefHeight="230.0" prefWidth="212.0" promptText="Motif" wrapText="true">
+                                                    <font>
+                                                        <Font name="Century Gothic Bold" size="15.0" />
+                                                    </font>
+                                                </JFXTextArea>
+                                                <JFXButton fx:id="retirerMontat" buttonType="RAISED" layoutX="11.0" layoutY="326.0" onAction="#traitement_parametrer" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" text="Retirer ">
+                                                    <graphic>
+                                                        <ImageView fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../image/icons8_US_Dollar_16.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </JFXButton>
+                                                <ListView fx:id="montatSorti1" layoutX="234.0" layoutY="189.0" prefHeight="200.0" prefWidth="570.0" />
+                                                <ComboBox fx:id="comboxDate" layoutX="557.0" layoutY="51.0" onAction="#chargerTableCaisse" prefHeight="27.0" prefWidth="138.0" />
+                                                <JFXButton buttonType="RAISED" layoutX="119.0" layoutY="326.0" prefHeight="26.0" prefWidth="105.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" text="Print">
+                                                    <graphic>
+                                                        <FontAwesomeIconView fill="#69dde8" glyphName="PRINT" size="15" />
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </JFXButton>
+                                                <JFXTextField fx:id="tauxTfd" labelFloat="true" layoutX="262.0" layoutY="47.0" maxWidth="247.0" minWidth="150.0" prefHeight="34.0" prefWidth="173.0" promptText="Modifier le taux">
+                                                    <font>
+                                                        <Font name="Century Gothic Bold" size="14.0" />
+                                                    </font>
+                                                </JFXTextField>
+                                                <JFXButton fx:id="modifiercaise" buttonType="RAISED" layoutX="441.0" layoutY="53.0" onAction="#requete_base" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #FBE075; -fx-border-radius: 4em; -fx-background-radius: 4em;" text="Modifier">
+                                                    <graphic>
+                                                        <FontAwesomeIconView fill="#69dde8" glyphName="SORT" />
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </JFXButton>
+                                    <JFXButton fx:id="btnVoir" buttonType="RAISED" layoutX="702.0" layoutY="53.0" onAction="#Action_voirplus" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #FADF75; -fx-border-radius: 4em; -fx-background-radius: 4em;" text="Voir plus...">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="13.0" />
+                                       </font>
+                                    </JFXButton>
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </HBox>
+                                <FontAwesomeIconView fill="#00bcd4" glyphName="GG" layoutX="418.0" layoutY="83.0" size="80" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="backup" text="Configuration">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FFF;">
+                            <children>
+                                <VBox layoutX="731.0" layoutY="122.0" prefHeight="84.0" prefWidth="121.0" style="-fx-background-color: #AAE8F0;" AnchorPane.leftAnchor="731.0">
+                                    <children>
+                                        <JFXButton fx:id="backup_base_donne" buttonType="RAISED" onAction="#requete_base" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" text="Backup">
+                                            <VBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                            </font>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="DATABASE" />
+                                            </graphic>
+                                        </JFXButton>
+                                        <JFXButton fx:id="restaure_base_donne" buttonType="RAISED" onAction="#requete_base" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" text="Restaure">
+                                            <VBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Century Gothic" size="13.0" />
+                                            </font>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="DATABASE" />
+                                            </graphic>
+                                        </JFXButton>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="168.0" layoutY="110.0" prefHeight="80.0" prefWidth="138.0" style="-fx-background-color: #AAE8F0;" AnchorPane.leftAnchor="168.0">
+                                    <children>
+                                        <JFXButton fx:id="btn_parcour_backup" buttonType="RAISED" onAction="#clic_parcourir_chemin" prefHeight="23.0" prefWidth="117.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" text="Browser">
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Segoe UI" size="12.0" />
+                                            </font>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="HOME" />
+                                            </graphic>
+                                        </JFXButton>
+                                        <JFXButton fx:id="btn_parcour_restaure" buttonType="RAISED" onAction="#clic_parcourir_chemin" prefHeight="23.0" prefWidth="118.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" text="Browser">
+                                            <VBox.margin>
+                                                <Insets left="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Segoe UI" size="12.0" />
+                                            </font>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="HOME" />
+                                            </graphic>
+                                        </JFXButton>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="337.0" layoutY="104.0" prefHeight="92.0" prefWidth="384.0" AnchorPane.leftAnchor="337.0">
+                                    <children>
+                                        <JFXTextField fx:id="chemin_backup_Tfd" maxWidth="444.0" minWidth="192.0" prefHeight="31.0" prefWidth="343.0" promptText="Chemim backup">
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                            </VBox.margin>
+                                        </JFXTextField>
+                                        <JFXTextField fx:id="chemin_backup_Tfd112" maxWidth="445.0" minWidth="190.0" prefHeight="31.0" prefWidth="445.0" promptText="Chemim restauration">
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                            </VBox.margin>
+                                        </JFXTextField>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="734.0" layoutY="229.0" prefHeight="69.0" prefWidth="116.0" style="-fx-background-color: #AAE8F0;" AnchorPane.leftAnchor="734.0">
+                                    <children>
+                                        <JFXButton fx:id="restaure_base_donne1" buttonType="RAISED" onAction="#requete_base" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" text="Enregistrer">
+                                            <VBox.margin>
+                                                <Insets left="10.0" top="20.0" />
+                                            </VBox.margin>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="SAVE" />
+                                            </graphic>
+                                        </JFXButton>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="165.0" layoutY="231.0" prefHeight="64.0" prefWidth="138.0" style="-fx-background-color: #AAE8F0;">
+                                    <children>
+                                        <JFXButton fx:id="btn_parcour_restaure1" buttonType="RAISED" onAction="#requete_base" prefHeight="23.0" prefWidth="121.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" text="Browser">
+                                            <VBox.margin>
+                                                <Insets left="10.0" top="20.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                            </font>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="HOME" />
+                                            </graphic>
+                                        </JFXButton>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="335.0" layoutY="217.0" prefHeight="92.0" prefWidth="379.0" AnchorPane.leftAnchor="337.0">
+                                    <children>
+                                        <JFXTextField fx:id="chemin_backup_Tfd1" maxWidth="444.0" minWidth="192.0" prefHeight="31.0" prefWidth="343.0" promptText="Cle d'identification">
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                            </VBox.margin>
+                                        </JFXTextField>
+                                        <JFXTextField fx:id="chemin_backup_Tfd11" maxWidth="445.0" minWidth="190.0" prefHeight="31.0" prefWidth="445.0" promptText="Chemin d'acces">
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                            </VBox.margin>
+                                        </JFXTextField>
+                                    </children>
+                                </VBox>
+                                <JFXTextField fx:id="backupheure" alignment="CENTER" layoutX="765.0" layoutY="492.0" maxWidth="414.0" minWidth="87.0" prefHeight="29.0" prefWidth="103.0" promptText="Heure backup" AnchorPane.bottomAnchor="-1.0" AnchorPane.rightAnchor="11.0">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="12.0" />
+                                    </font>
+                                </JFXTextField>
+                                <FontAwesomeIconView fill="#00bcd4" glyphName="DATABASE" layoutX="495.0" layoutY="83.0" size="80" wrappingWidth="68.57142639160156" />
+                                <FontAwesomeIconView fx:id="actionModifierheure" glyphName="DATABASE" layoutX="868.0" layoutY="513.0" onMouseClicked="#modifier_le_heure" AnchorPane.bottomAnchor="5.285714149475098" AnchorPane.rightAnchor="0.7142858505249023">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </FontAwesomeIconView>
+                                <Label alignment="CENTER" layoutX="406.0" layoutY="201.0" prefHeight="17.0" prefWidth="255.0" text="Configuration de chemin d'acces">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="409.0" layoutY="94.0" prefHeight="17.0" prefWidth="255.0" text="Backup &amp; Restaure">
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="461.0" layoutY="301.0" text="imprimer">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="525.0" layoutY="301.0" text="codebar">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="586.0" layoutY="301.0" text="backup">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="642.0" layoutY="301.0" text="url1">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="341.0" layoutY="301.0" prefHeight="17.0" prefWidth="111.0" text="Clé d'identification">
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Label>
+                                <JFXButton fx:id="confugBtn" buttonType="RAISED" layoutX="399.0" layoutY="383.0" onAction="#requete_base" prefHeight="55.0" prefWidth="275.0" style="-fx-background-color: #FBE075; -fx-background-radius: 4em; -fx-border-radius: 4em;" text="Configuration de la base de donne">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="DATABASE" size="25" />
+                                    </graphic>
+                                    <font>
+                                        <Font name="Century Gothic Bold" size="12.0" />
+                                    </font>
+                                </JFXButton>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </JFXTabPane>
+    </children>
+</AnchorPane>

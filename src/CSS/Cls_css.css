@@ -1,0 +1,53 @@
+.btns
+{
+    -fx-background-color: transparent;
+}
+.btns:hover
+{
+    -fx-background-color: F8A300;
+}
+.box
+{
+    -fx-border-color:#7C8184;
+    -fx-border-width:1px 0px 0px 0px;
+}
+.round_lbl
+{
+    -fx-background-color:#FE7A79;
+    -fx-background-radius:100%;
+}
+.btn_clic:hover
+{
+    -fx-background-color:transparent;
+    -fx-text-fill:#6747CD;
+    -fx-border-width:1px;
+    -fx-border-style:solid;
+}
+.btn_clic
+{
+    -fx-background-color:#6747CD;
+    -fx-text-fill:#FFF;
+
+}
+.round_pro
+{
+    -fx-background-radius:100%;
+    -fx-background-radius:100%;
+    -fx-border-width:5px;
+}
+.card-01
+{
+    -fx-background-color: rgba(0,162,211,0.3);
+}
+.hover_border:hover
+{
+    -fx-border-color:#0fbcf9;
+    -fx-border-width:0px 0px 0px 2px;
+    -fx-background-color:#34e7e4e0;
+}
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+

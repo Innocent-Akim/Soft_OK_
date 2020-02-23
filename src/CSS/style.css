@@ -1,0 +1,40 @@
+.custom-text-field{
+-fx-text-fill: #E3E3E3;
+}
+
+.custom-text-field:focused{
+-fx-text-fill: #ff993e;
+}
+
+.side-menu-btn{
+    -fx-text-fill: #8facbf;
+    -fx-background-color: #343A3E;
+}
+.side-menu-btn .glyph-icon{
+    -fx-fill : #8facbf;
+}
+.side-menu-btn:hover{
+    -fx-background-color: #32373B;
+    -fx-text-fill: #ff993e;
+    /*-fx-border-width : 0px 0px 0px 5px;*/
+    /*-fx-border-color : #ff993e;*/
+    -fx-cursor: hand;
+}
+.side-menu-btn:hover .glyph-icon{
+    -fx-fill : #ff993e;
+}
+.side-menu-btn-active{
+    -fx-background-color: #32373B;
+    -fx-text-fill: #ff993e;
+    -fx-border-width : 0px 0px 0px 5px;
+    -fx-border-color : #ff993e;
+    -fx-cursor: hand;
+}
+.side-menu-btn-active .glyph-icon{
+    -fx-fill : #ff993e;
+}
+
+.button-popup-menu{
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #39C3DD;
+}

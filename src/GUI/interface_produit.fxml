@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="produit_interface" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="879.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Interface_produitController">
+   <children>
+      <TableView fx:id="tab_prod" layoutX="14.0" layoutY="286.0" onMouseClicked="#clic_table" prefHeight="259.0" prefWidth="853.0" stylesheets="@../CSS/tableSking.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="286.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn minWidth="-1.0" prefWidth="-1.0" text="C2" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <VBox layoutX="130.0" layoutY="32.0" prefHeight="150.0" prefWidth="316.0">
+         <children>
+            <JFXTextField fx:id="codebarTfd" labelFloat="true" onKeyPressed="#key_released_codebar" promptText="Barcode" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="disgna_tfd" labelFloat="true" prefWidth="234.0" promptText="Désignation">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="unite_Tfd" labelFloat="true" promptText="Unite">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="punitaireTfd" labelFloat="true" maxWidth="331.0" minWidth="167.0" onKeyReleased="#priUnitaire_isNumerique" prefHeight="29.0" prefWidth="240.0" promptText="P.Unitaire">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <ComboBox fx:id="devise_cbx" prefHeight="25.0" prefWidth="107.0" promptText="Devise" styleClass="textfiled" stylesheets="@../CSS/Object_Style.css">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </ComboBox>
+         </children>
+      </VBox>
+      <VBox layoutX="446.0" layoutY="32.0" prefHeight="160.0" prefWidth="316.0">
+         <children>
+            <JFXTextField fx:id="quantiteTfd" labelFloat="true" onKeyReleased="#quantite_disponible" promptText="Quantite">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="formeTfd" labelFloat="true" promptText="Boite">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="nom_fab" labelFloat="true" promptText="Nom fabricat">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <ComboBox fx:id="categorieCbx" onAction="#selection_code" prefHeight="25.0" prefWidth="292.0" promptText="Categorie" styleClass="textfiled" stylesheets="@../CSS/Object_Style.css">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="15.0" />
+               </VBox.margin>
+            </ComboBox>
+         </children>
+      </VBox>
+      <JFXButton fx:id="categorieBtn" buttonType="RAISED" layoutX="753.0" layoutY="162.0" onAction="#categorie_btn_clic" prefHeight="28.0" prefWidth="24.0" style="-fx-background-color: #022C44; -fx-background-radius: 4em; -fx-border-radius: 4em;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="+" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <HBox layoutX="136.0" layoutY="226.0" style="-fx-background-color: ;">
+         <children>
+            <JFXButton fx:id="enregistreBtn" buttonType="RAISED" onAction="#enre_update" prefHeight="25.0" prefWidth="103.0" style="-fx-border-radius: 4em; -fx-background-radius: 4em; -fx-background-color: #022C44;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="Enregistrer" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="updateBtn" buttonType="RAISED" onAction="#enre_update" prefHeight="25.0" prefWidth="103.0" style="-fx-border-radius: 4em; -fx-background-radius: 4em; -fx-background-color: #022C44;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PENCIL_SQUARE_ALT" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="delete_" buttonType="RAISED" onAction="#enre_update" prefHeight="25.0" prefWidth="103.0" style="-fx-border-radius: 4em; -fx-background-radius: 4em; -fx-background-color: #022C44;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="UNDO" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="imprimerProduitBtn" buttonType="RAISED" onAction="#enre_update" prefHeight="25.0" prefWidth="103.0" style="-fx-border-radius: 4em; -fx-background-radius: 4em; -fx-background-color: #022C44;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="Imprimer" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PRINT" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox layoutX="597.0" layoutY="239.0" prefHeight="25.0" prefWidth="270.0" style="-fx-border-color: #B5B5B5; -fx-border-radius: 4em;">
+         <children>
+            <TextField fx:id="rechercherTfd" onKeyReleased="#recherech_produit" prefHeight="25.0" prefWidth="273.0" promptText="Rechercher" style="-fx-background-color: Transparent;">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </TextField>
+            <JFXButton buttonType="RAISED" prefHeight="25.0" prefWidth="24.0" style="-fx-background-color: #022C44; -fx-background-radius: 4em; -fx-border-radius: 4em;" textFill="#f5f4f4">
+               <HBox.margin>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

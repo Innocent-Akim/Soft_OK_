@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="344.0" style="-fx-background-color: #2F3241;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Interface_configurationController">
+   <children>
+      <JFXButton fx:id="testConnection" buttonType="RAISED" layoutX="178.0" layoutY="252.0" onAction="#ConnecterFa1" prefHeight="19.0" prefWidth="98.0" style="-fx-background-radius: 4em; -fx-border-radius: 4em; -fx-border-color: #757984;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="Test" textFill="#757984">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#757984" glyphName="REFRESH" />
+         </graphic>
+      </JFXButton>
+      <FontAwesomeIconView fill="WHITE" glyphName="CARET_RIGHT" layoutX="25.0" layoutY="92.0" size="25" wrappingWidth="6.999999778345227" />
+      <JFXTextField fx:id="server_" focusColor="#f6f7fc" layoutX="35.0" layoutY="68.0" maxWidth="285.0" minWidth="285.0" prefHeight="31.0" prefWidth="285.0" promptText="Server" styleClass="forgetBtn" stylesheets="@../CSS/cls_login.css" unFocusColor="#ee0808">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </JFXTextField>
+      <FontAwesomeIconView fill="WHITE" glyphName="CARET_RIGHT" layoutX="25.0" layoutY="120.0" size="25" wrappingWidth="6.999999778345227" />
+      <JFXTextField fx:id="BD" focusColor="#f6f7fc" layoutX="35.0" layoutY="96.0" maxWidth="285.0" minWidth="285.0" prefHeight="31.0" prefWidth="285.0" promptText="Database" styleClass="forgetBtn" stylesheets="@../CSS/cls_login.css" unFocusColor="#ee0808">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </JFXTextField>
+      <FontAwesomeIconView fill="WHITE" glyphName="CARET_RIGHT" layoutX="25.0" layoutY="156.0" size="25" wrappingWidth="6.999999778345227" />
+      <JFXTextField fx:id="login" focusColor="#f6f7fc" layoutX="35.0" layoutY="132.0" maxWidth="285.0" minWidth="285.0" prefHeight="31.0" prefWidth="285.0" promptText="Login" styleClass="forgetBtn" stylesheets="@../CSS/cls_login.css" unFocusColor="#ee0808">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </JFXTextField>
+      <FontAwesomeIconView fill="WHITE" glyphName="CARET_RIGHT" layoutX="25.0" layoutY="188.0" size="25" wrappingWidth="6.999999778345227" />
+      <JFXButton fx:id="save_configuration" buttonType="RAISED" layoutX="25.0" layoutY="256.0" onAction="#ConnecterFa" prefHeight="25.0" prefWidth="98.0" style="-fx-background-radius: 4em; -fx-border-radius: 4em; -fx-border-color: #757984;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="Save" textFill="#757984">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#757984" glyphName="SAVE" />
+         </graphic>
+      </JFXButton>
+      <FontAwesomeIconView fx:id="retour" fill="#757984" glyphName="ARROW_LEFT" glyphStyle="1.2em" layoutX="1.0" layoutY="14.0" onMouseClicked="#back_up" size="15" wrappingWidth="15.285714149475098">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIconView>
+      <JFXPasswordField fx:id="pwd" focusColor="WHITE" layoutX="35.0" layoutY="163.0" maxWidth="285.0" minWidth="285.0" prefHeight="31.0" prefWidth="285.0" promptText="Password" styleClass="forgetBtn" stylesheets="@../CSS/cls_login.css" unFocusColor="#ee0808">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <FontAwesomeIconView fx:id="exit1" fill="#757984" glyphName="CLOSE" glyphStyle="1.2em" layoutX="328.0" layoutY="16.0" onMouseClicked="#closeAPK" size="20">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <Label alignment="CENTER" layoutY="32.0" prefHeight="19.0" prefWidth="344.0" text="Configuration serveur" textFill="#757984">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#e8e4e4" glyphName="DATABASE" />
+         </graphic>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label fx:id="testConnection_" layoutX="29.0" layoutY="221.0" prefHeight="17.0" prefWidth="285.0" textFill="#f80505">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Label>
+      <ProgressIndicator fx:id="progresseBar" layoutX="284.0" layoutY="244.0" progress="0.0" />
+   </children>
+</AnchorPane>

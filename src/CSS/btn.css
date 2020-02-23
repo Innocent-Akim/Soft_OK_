@@ -1,0 +1,12 @@
+.btn:hover{
+    -fx-background-color:#D00D20 ;
+
+    -fx-text-fill: #FFFFFF;
+/*    -fx-border-color: #1B1464;
+    -fx-border-width: 0px 0px 0px 3px;*/
+}
+.btn{
+
+    -fx-background-color: transparent;
+}
+

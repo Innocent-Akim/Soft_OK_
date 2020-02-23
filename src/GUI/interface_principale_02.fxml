@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPopup?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="containere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#key_Help" prefHeight="695.0" prefWidth="1304.0" style="-fx-background-color: #313444;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Interface_principale_02Controller">
+   <children>
+      <VBox layoutX="19.0" layoutY="85.0" prefHeight="322.0" prefWidth="150.0" AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="85.0">
+         <children>
+            <JFXButton fx:id="acceuilBtn" buttonType="RAISED" onAction="#principale_appel" prefHeight="25.0" prefWidth="169.0" ripplerFill="#a41d1d" style="-fx-background-radius: 20;" stylesheets="@../CSS/Cls_css.css" text="Accueil     " textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="12" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="hover_border" />
+                  <String fx:value="hyperlink" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="approviBtn" buttonType="RAISED" onAction="#principale_appel" prefHeight="25.0" prefWidth="169.0" ripplerFill="#a41d1d" style="-fx-background-radius: 20;" stylesheets="@../CSS/Cls_css.css" text=" Approvi    " textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOURGLASS_2" size="12" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="hover_border" />
+                  <String fx:value="hyperlink" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="produitBtn" buttonType="RAISED" onAction="#principale_appel" prefHeight="25.0" prefWidth="169.0" ripplerFill="#a41d1d" style="-fx-background-radius: 20;" stylesheets="@../CSS/Cls_css.css" text=" Produit      " textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MEDIUM" size="12" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="hover_border" />
+                  <String fx:value="hyperlink" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="venteBtn" buttonType="RAISED" onAction="#principale_appel" prefHeight="25.0" prefWidth="169.0" ripplerFill="#a41d1d" style="-fx-background-radius: 20;" stylesheets="@../CSS/Cls_css.css" text=" Vente        " textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="12" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="hover_border" />
+                  <String fx:value="hyperlink" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="statistiBtn" buttonType="RAISED" onAction="#principale_appel" prefHeight="25.0" prefWidth="169.0" ripplerFill="#a41d1d" style="-fx-background-radius: 20;" stylesheets="@../CSS/Cls_css.css" text=" Statistique" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="12" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="hover_border" />
+                  <String fx:value="hyperlink" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="document_" buttonType="RAISED" onAction="#principale_appel" prefHeight="25.0" prefWidth="169.0" ripplerFill="#a41d1d" style="-fx-background-radius: 20;" stylesheets="@../CSS/Cls_css.css" text=" Rapport " textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="FOLDER_OPEN" size="12" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="hover_border" />
+                  <String fx:value="hyperlink" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="parameBtn" buttonType="RAISED" onAction="#principale_appel" prefHeight="25.0" prefWidth="169.0" ripplerFill="#a41d1d" style="-fx-background-radius: 20;" stylesheets="@../CSS/Cls_css.css" text=" Parametre" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="COGS" size="12" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="hover_border" />
+                  <String fx:value="hyperlink" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="parameBtn1" buttonType="RAISED" onAction="#principale_appel" prefHeight="25.0" prefWidth="169.0" ripplerFill="#a41d1d" style="-fx-background-radius: 20;" stylesheets="@../CSS/Cls_css.css" text="Aides          " textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="VINE" size="12" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="hover_border" />
+                  <String fx:value="hyperlink" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Circle fill="#f9fcff" layoutX="92.0" layoutY="43.0" radius="42.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label alignment="CENTER" layoutX="74.0" layoutY="10.0" style="-fx-background-radius: 2em;" text="P">
+         <font>
+            <Font name="Segoe UI Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="48.0" prefHeight="25.0" prefWidth="52.0" style="-fx-background-radius: 2em;" text="Soft">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="74.0" layoutY="10.0" prefHeight="52.0" prefWidth="62.0" style="-fx-background-radius: 2em;" text="H" textFill="#bf2525">
+         <font>
+            <Font name="Segoe UI Bold" size="50.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="unte" layoutX="187.0" layoutY="-2.0" onMouseDragged="#dragged1" onMousePressed="#pressed" prefHeight="60.0" prefWidth="879.0" style="-fx-background-color: #757984;" AnchorPane.leftAnchor="187.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <FontAwesomeIconView fill="#313444" glyphName="BELL" layoutX="28.0" layoutY="49.0" size="25" />
+            <Label fx:id="nom_concter_" alignment="CENTER" layoutX="38.0" layoutY="19.0" prefHeight="15.0" prefWidth="15.0" styleClass="round_lbl" stylesheets="@../CSS/Cls_css.css" text="8" textFill="#fffdfd">
+               <font>
+                  <Font name="Calibri Light" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="username" alignment="CENTER_RIGHT" layoutX="527.0" prefHeight="23.0" prefWidth="352.0" textFill="#00aac0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_Life_Cycle_32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="niveauConnexion" layoutX="68.0" layoutY="2.0" prefHeight="24.0" prefWidth="299.0" textFill="#00aac0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_Checklist_16.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <JFXPopup fx:id="popapConnexion" layoutX="598.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="262.0" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" />
+            <FontAwesomeIconView fx:id="btnConnection_1" fill="#171717" fontSmoothingType="LCD" glyphName="WIFI" layoutX="536.0000065565109" layoutY="54.85714244842529" onMouseClicked="#Popup_actionConfiguration" size="25" wrappingWidth="24.000006556510925" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="536.0000065565109" AnchorPane.rightAnchor="318.99998688697815">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIconView>
+            <Label fx:id="timer" layoutX="87.0" layoutY="24.0" prefHeight="33.0" prefWidth="137.0" text="Label" textFill="#fcf9f9">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="date_actuelle" layoutX="224.0" layoutY="24.0" prefHeight="33.0" prefWidth="178.0" text="Label" textFill="#fcf9f9">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox fx:id="vboxDeconexion" layoutX="19.0" layoutY="407.0" prefHeight="200.0" prefWidth="150.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="5.0" prefWidth="110.0" text="Niveau acces" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="9.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <JFXButton fx:id="deconnectionBtn" buttonType="RAISED" onAction="#deconnection" prefHeight="25.0" prefWidth="159.0" ripplerFill="#a41d1d" stylesheets="@../CSS/Cls_css.css" text="Deconnecter" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="18.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_Sign_Out_16.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="hover_border" />
+                  <String fx:value="hyperlink" />
+               </styleClass>
+            </JFXButton>
+            <Circle fx:id="alerter" fill="#313444" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+               <VBox.margin>
+                  <Insets left="60.0" top="10.0" />
+               </VBox.margin>
+            </Circle>
+            <Circle fx:id="alerte_2" fill="#313444" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+               <VBox.margin>
+                  <Insets left="60.0" top="10.0" />
+               </VBox.margin>
+            </Circle>
+            <Circle fx:id="alerter_3" fill="#313444" radius="12.0" stroke="#0a0a0a" strokeType="INSIDE">
+               <VBox.margin>
+                  <Insets left="60.0" top="10.0" />
+               </VBox.margin>
+            </Circle>
+            <JFXPopup fx:id="popup" prefHeight="60.0" prefWidth="188.0" />
+            <Circle fx:id="alerter_4" fill="#313444" radius="12.0" stroke="#0a0a0a" strokeType="INSIDE">
+               <VBox.margin>
+                  <Insets left="60.0" top="10.0" />
+               </VBox.margin>
+            </Circle>
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </VBox>
+      <StackPane fx:id="ecran_principal" layoutX="187.0" layoutY="59.0" prefHeight="570.0" prefWidth="879.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="187.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="59.0" />
+   </children>
+</AnchorPane>

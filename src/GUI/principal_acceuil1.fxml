@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="126.0" prefWidth="832.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Principal_acceuil1Controller">
+   <children>
+      <Pane layoutX="51.0" layoutY="32.0" prefHeight="90.0" prefWidth="244.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label fx:id="perimer" alignment="CENTER" layoutX="-1.0" layoutY="15.0" prefHeight="61.0" prefWidth="244.0" text="00" textFill="#101111">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="-1.0" layoutY="1.0" prefHeight="27.0" prefWidth="236.0" text="Utilisateurs">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow color="#00aac0" />
+         </effect>
+      </Pane>
+      <Pane layoutX="299.0" layoutY="31.0" prefHeight="90.0" prefWidth="244.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label fx:id="presExpire" alignment="CENTER" layoutX="-1.0" layoutY="19.0" prefHeight="53.0" prefWidth="244.0" text="00" textFill="#101111">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="1.0" prefHeight="27.0" prefWidth="236.0" text="Fournisseurs">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow color="#bf2525" />
+         </effect>
+      </Pane>
+      <Pane layoutX="547.0" layoutY="32.0" prefHeight="90.0" prefWidth="244.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label fx:id="produitNondispo" alignment="CENTER" layoutX="-1.0" layoutY="19.0" prefHeight="53.0" prefWidth="244.0" text="00" textFill="#101111">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="236.0" text="Clients">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow color="#7fba00" />
+         </effect>
+      </Pane>
+      <Label fx:id="clicIci" alignment="CENTER" layoutX="374.0" layoutY="1.0" onMouseClicked="#ActionExpiration" prefHeight="27.0" prefWidth="236.0" styleClass="hyperlink" stylesheets="@../CSS/main.css" text="Nombre des Utilisateurs &amp; Autres" textFill="#ddd6d6">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

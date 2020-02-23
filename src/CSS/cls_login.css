@@ -1,0 +1,32 @@
+.parent
+{
+    -fx-background-color:white;
+}
+.sidebar
+{
+    -fx-background-color:#6747CD;
+}
+.forgetBtn
+{
+    -fx-text-fill:#a3a3a3;
+}
+.forgetBtn:hover
+{
+    -fx-text-fill:#a3a3a3;
+}
+.loginBtn
+{
+    -fx-background-color:#19b75a;
+    -fx-text-fill:#FFF;	
+    -fx-background-radius:10px;
+}
+.loginBtn:hover
+{
+    -fx-background-radius:10px;
+    -fx-background-color:#19b75a;
+    -fx-text-fill:#19b75a;
+    -fx-border-color:#19b75a;	
+    -fx-border-radius:10px;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="loginPrincipale" prefHeight="295.0" prefWidth="659.0" style="-fx-background-color: #313444;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Interface_loginController">
+   <children>
+      <VBox prefHeight="295.0" prefWidth="315.0" style="-fx-background-color: #FFF;">
+         <children>
+            <Label prefHeight="17.0" prefWidth="63.0" text="LOGIN" textFill="#757984">
+               <graphic>
+                  <FontAwesomeIconView fill="#bf2525" glyphName="USER" size="15" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="15.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="252.0" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets left="75.0" top="50.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../image/pharmacie--71660808.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="TOP" prefHeight="29.0" prefWidth="325.0" style="-fx-background-color: #313444; -fx-background-radius: 2em;" text="WELCOME TO MAMU-PHAR" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+               <font>
+                  <Font name="Century Gothic Bold" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Pane fx:id="contenairePn" layoutX="315.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="344.0">
+         <children>
+            <Label layoutX="188.0" layoutY="193.0" prefHeight="19.0" prefWidth="131.0" text="Mot de passe oublier" textFill="#757984">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <Circle fill="#f9fcff" layoutX="260.0" layoutY="78.0" radius="43.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label alignment="CENTER" layoutX="238.0" layoutY="18.0" prefHeight="114.0" prefWidth="44.0" style="-fx-background-radius: 2em;" text="P">
+               <font>
+                  <Font name="Segoe UI Bold" size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="219.0" layoutY="64.0" prefHeight="25.0" prefWidth="74.0" style="-fx-background-radius: 2em;" text="Soft">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="235.0" layoutY="51.0" prefHeight="71.0" prefWidth="74.0" style="-fx-background-radius: 2em;" text="H" textFill="#bf2525">
+               <font>
+                  <Font name="Segoe UI Bold" size="50.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnConnecter" buttonType="RAISED" layoutX="24.0" layoutY="213.0" onAction="#ConnecterF" prefHeight="25.0" prefWidth="98.0" style="-fx-background-radius: 4em; -fx-border-radius: 4em; -fx-border-color: #757984;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="Login" textFill="#757984">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#757984" glyphName="USER" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <FontAwesomeIconView fill="#bf2525" glyphName="GG" layoutY="19.0" size="20" />
+            <FontAwesomeIconView fill="WHITE" glyphName="CARET_RIGHT" layoutX="20.0" layoutY="146.0" size="25" wrappingWidth="6.999999778345227" />
+            <FontAwesomeIconView fill="WHITE" fontSmoothingType="LCD" glyphName="CARET_RIGHT" layoutX="20.0" layoutY="190.0" size="25" wrappingWidth="7.0000000931322575" />
+            <Label fx:id="date_" layoutX="24.0" layoutY="4.0" prefHeight="18.0" prefWidth="201.0" text="Label" textFill="#757984">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="usernameTfd" focusColor="#f6f7fc" labelFloat="true" layoutX="30.0" layoutY="122.0" maxWidth="285.0" minWidth="285.0" onKeyReleased="#clic_attend" prefHeight="31.0" prefWidth="285.0" promptText="Usename" styleClass="forgetBtn" stylesheets="@../CSS/cls_login.css" unFocusColor="#09e23b">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passwordTfd" focusColor="WHITE" labelFloat="true" layoutX="30.0" layoutY="166.0" maxWidth="285.0" minWidth="285.0" onKeyReleased="#key_clic" prefHeight="31.0" prefWidth="285.0" promptText="Password" styleClass="forgetBtn" stylesheets="@../CSS/cls_login.css" unFocusColor="#09e23b">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="testConnection" buttonType="RAISED" layoutX="248.0" layoutY="257.0" onAction="#ConnecterF" prefHeight="25.0" prefWidth="86.0" style="-fx-background-radius: 4em; -fx-border-radius: 4em; -fx-border-color: #757984;" styleClass="hover_border" stylesheets="@../CSS/Cls_css.css" text="Confi" textFill="#757984">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#757984" glyphName="DATABASE" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="rester_essaie" layoutX="32.0" layoutY="190.0" prefHeight="19.0" prefWidth="131.0" textFill="#757984">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="26.0" prefHeight="50.0" prefWidth="220.0" text="Connectez-vous pour avoir accès aux données" textAlignment="CENTER" textFill="#757984" wrapText="true">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="20" />
+               </graphic>
+            </Label>
+        
+         </children>
+      </Pane>
+      <FontAwesomeIconView fx:id="exit" fill="#757984" glyphName="CLOSE" glyphStyle="1.2em" layoutX="641.0" layoutY="16.0" onMouseClicked="#closeAPK" size="20">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <Separator layoutX="312.0" orientation="VERTICAL" prefHeight="295.0" prefWidth="1.0" />
+   </children>
+</AnchorPane>

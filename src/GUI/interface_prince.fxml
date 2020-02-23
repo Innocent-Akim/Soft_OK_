@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="principale_" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="1056.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Interface_princeController">
+    <children>
+        <VBox layoutY="6.0" prefHeight="588.0" prefWidth="176.0" style="-fx-background-color: #142634;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox onMouseDragged="#dragged" prefHeight="121.0" prefWidth="176.0" style="-fx-background-color: #F8A300;">
+                    <effect>
+                        <DropShadow height="8.9" radius="2.4675000000000002" width="2.97" />
+                    </effect>
+                </HBox>
+                <HBox prefHeight="28.0" prefWidth="176.0" />
+                <HBox onMouseClicked="#action_produit" prefHeight="32.0" prefWidth="176.0" stylesheets="@../CSS/Cls_css.css">
+                    <children>
+                        <Label fx:id="produit_btn" alignment="CENTER" onMouseClicked="#action_produit" prefHeight="32.0" prefWidth="168.0" text="Produit" textFill="#cad0d3">
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="Calibri Light" size="20.0" />
+                            </font>
+                            <graphic>
+                                <FontAwesomeIconView fill="#7c8184" glyphName="SHOPPING_CART" size="25" />
+                            </graphic>
+                            <cursor>
+                       
+                            </cursor>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <styleClass>
+                        <String fx:value="btns" />
+                        <String fx:value="btn_clic" />
+                    </styleClass>
+                </HBox>
+                <HBox onMouseClicked="#action_produit" prefHeight="32.0" prefWidth="176.0" stylesheets="@../CSS/Cls_css.css">
+                    <children>
+                        <Label fx:id="vente_btn" alignment="CENTER" onMouseClicked="#action_produit" prefHeight="32.0" prefWidth="168.0" styleClass="btns" text="Vente" textFill="#cad0d3">
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                            <graphic>
+                                <FontAwesomeIconView fill="#7c8184" glyphName="PUZZLE_PIECE" size="25" />
+                            </graphic>
+                            <font>
+                                <Font name="Calibri Light" size="20.0" />
+                            </font>
+                            <cursor>
+                        
+                            </cursor>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <styleClass>
+                        <String fx:value="btns" />
+                        <String fx:value="btn_clic" />
+                    </styleClass>
+                </HBox>
+                <HBox prefHeight="32.0" prefWidth="176.0" stylesheets="@../CSS/Cls_css.css">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="165.0" styleClass="btns" text="Appro." textFill="#cad0d3">
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                            <graphic>
+                                <FontAwesomeIconView fill="#7c8184" glyphName="OPENCART" size="25" />
+                            </graphic>
+                            <font>
+                                <Font name="Calibri Light" size="20.0" />
+                            </font>
+                            <cursor>
+                      
+                            </cursor>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <styleClass>
+                        <String fx:value="btns" />
+                        <String fx:value="btn_clic" />
+                    </styleClass>
+                </HBox>
+                <HBox prefHeight="32.0" prefWidth="176.0" stylesheets="@../CSS/Cls_css.css">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="166.0" styleClass="btns" text="Statistique" textFill="#cad0d3">
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="Calibri Light" size="20.0" />
+                            </font>
+                            <graphic>
+                                <FontAwesomeIconView fill="#7c8184" glyphName="SCISSORS" size="25" />
+                            </graphic>
+                            <cursor>
+                      
+                            </cursor>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <styleClass>
+                        <String fx:value="btns" />
+                        <String fx:value="btn_clic" />
+                    </styleClass>
+                </HBox>
+                <HBox prefHeight="32.0" prefWidth="176.0" stylesheets="@../CSS/Cls_css.css">
+                    <children>
+                        <Label fx:id="parametreBtn_pr" alignment="CENTER" onMouseClicked="#action_produit" prefHeight="32.0" prefWidth="168.0" styleClass="btns" text="Parametre" textFill="#cad0d3">
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                            <graphic>
+                                <FontAwesomeIconView fill="#7c8184" glyphName="WRENCH" size="25" />
+                            </graphic>
+                            <font>
+                                <Font name="Calibri Light" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <styleClass>
+                        <String fx:value="btns" />
+                        <String fx:value="btn_clic" />
+                    </styleClass>
+                </HBox>
+                <HBox prefHeight="32.0" prefWidth="176.0" stylesheets="@../CSS/Cls_css.css">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="172.0" styleClass="btns" text="Document" textFill="#cad0d3">
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                            <graphic>
+                                <FontAwesomeIconView fill="#7c8184" glyphName="XING" size="25" />
+                            </graphic>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <styleClass>
+                        <String fx:value="btns" />
+                        <String fx:value="btn_clic" />
+                    </styleClass>
+                </HBox>
+                <HBox prefHeight="28.0" prefWidth="176.0" stylesheets="@../CSS/Cls_css.css">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </HBox>
+            </children>
+        </VBox>
+        <Pane layoutX="177.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="32.0" prefWidth="879.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="0.0">
+            <effect>
+                <DropShadow height="8.9" radius="2.4675000000000002" width="2.97" />
+            </effect>
+            <children>
+            
+                <FontAwesomeIconView glyphName="BELL" layoutX="115.0" layoutY="22.0" size="15" wrappingWidth="12.0" />
+                <Label fx:id="nom_concter_" alignment="CENTER" layoutX="124.0" layoutY="-1.0" prefHeight="15.0" prefWidth="15.0" styleClass="round_lbl" stylesheets="@../CSS/Cls_css.css" text="2" textFill="#fffdfd">
+                    <font>
+                        <Font name="Calibri Light" size="15.0" />
+                    </font>
+                </Label>
+                <FontAwesomeIconView fx:id="_close" fill="#0d0d0d" glyphName="CLOSE" layoutX="848.0" layoutY="21.0" onMouseClicked="#exit_appli" size="18" />
+                <Label fx:id="heure_du_jour" alignment="CENTER" layoutX="197.0" layoutY="3.0" prefHeight="28.0" prefWidth="190.0">
+                    <font>
+                        <Font name="Calibri Light" size="20.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="GG" />
+                    </graphic>
+                </Label>
+                <Label fx:id="date_du_jour" alignment="CENTER" layoutX="399.0" layoutY="4.0" prefHeight="28.0" prefWidth="190.0" text="Label">
+                    <font>
+                        <Font name="Calibri Light" size="20.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="SPINNER" />
+                    </graphic>
+                </Label>
+            </children>
+        </Pane>
+        <StackPane fx:id="ecran_1" layoutX="177.0" layoutY="32.0" prefHeight="555.0" prefWidth="879.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+.tab
+{
+    -fx-pref-width: 575;
+    -fx-pref-height: 50;
+    -fx-background-color:  #962928;
+}
+
+.tab-header-background{
+    /*-fx-background-color: #4A9BF0;*/
+    -fx-background-color: #962928;
+}
+
+.tab1
+{
+    -fx-pref-width: 575;
+    -fx-pref-height: 50;
+    -fx-background-color:  #962928;
+}
+
+.tab1-header-background{
+    /*-fx-background-color: #4A9BF0;*/
+    -fx-background-color: #962928;
+}
